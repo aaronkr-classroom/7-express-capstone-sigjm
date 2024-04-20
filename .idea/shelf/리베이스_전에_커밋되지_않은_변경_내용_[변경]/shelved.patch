@@ -1,0 +1,115 @@
+Index: controllers/errorController.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// errorController.js\r\n\"use strict\";\r\n\r\n\r\n\r\n/**\r\n * Listing 11.2 (p. 168)\r\n */\r\n\r\n\r\n/**\r\n * Listing 12.11 (p. 184)\r\n * 에러 처리 라우트 추가\r\n */\r\n\r\n\r\n/**\r\n * [노트] 라우트 순서는 중요하다. 이 라우트는 기존에 존재하는 라우트 아래에 와야 한다.\r\n * 기존 라우트는 범용으로 사용되는 것이며 하위 라우트에 오버라이딩되기 때문이다.\r\n */
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/controllers/errorController.js b/controllers/errorController.js
+--- a/controllers/errorController.js	(revision 0407ec3c6689a4ea81e5f65ab085746a9b70cb4e)
++++ b/controllers/errorController.js	(date 1713609101038)
+@@ -1,8 +1,6 @@
+ // errorController.js
+ "use strict";
+ 
+-
+-
+ /**
+  * Listing 11.2 (p. 168)
+  */
+@@ -12,7 +10,21 @@
+  * Listing 12.11 (p. 184)
+  * 에러 처리 라우트 추가
+  */
++const httpStatus = require("http-status-codes");
+ 
++exports.pageNotFoundError = (req, res) => {
++    let errorCode = httpStatus.NOT_FOUND;
++    res.status(errorCode);
++    res.render("error");
++};
++
++exports.resInternalError = (err, req, res, next) => {
++    let errorCode = httpStatus.INTERNAL_SERVER_ERROR;
++    //console,log(`ERROR occurred: ${error.stack}`);
++    res.status(errorCode);
++    //res.send(`${errorCode} | Sorry, our application is taking a nap!`);
++    res.render("error");
++};
+ 
+ /**
+  * [노트] 라우트 순서는 중요하다. 이 라우트는 기존에 존재하는 라우트 아래에 와야 한다.
+Index: controllers/homeController.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// homeController.js\r\n\"use strict\";\r\n\r\n/**\r\n * Listing 12.5 (p. 178)\r\n * 홈 컨트롤러로의 라우팅\r\n */\r\n\r\n\r\n/**\r\n * Listing 12.9 (p. 182)\r\n * 콘텐츠의 설정과 렌더링된 뷰에 전달\r\n * \r\n * [노트] 뷰 안에서는 offeredCourses라는 변수명을 통해 배열에 접근할 수 있다.\r\n * 홈 컨트롤러 내에서 이 배열은 courses라는 이름으로 다룬다.\r\n */\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/controllers/homeController.js b/controllers/homeController.js
+--- a/controllers/homeController.js	(revision 0407ec3c6689a4ea81e5f65ab085746a9b70cb4e)
++++ b/controllers/homeController.js	(date 1713609120460)
+@@ -5,12 +5,46 @@
+  * Listing 12.5 (p. 178)
+  * 홈 컨트롤러로의 라우팅
+  */
++exports.showCourses = (req, res)=> {
++    res.render("courses")
++};
++exports.showSignUp = (req, res)=> {
++    res.render("contact")
++};
++exports.postedContactForm = (req, res)=> {
++    res.render("thanks")
++};
+ 
+ 
+ /**
+  * Listing 12.9 (p. 182)
+  * 콘텐츠의 설정과 렌더링된 뷰에 전달
+- * 
++ *
+  * [노트] 뷰 안에서는 offeredCourses라는 변수명을 통해 배열에 접근할 수 있다.
+  * 홈 컨트롤러 내에서 이 배열은 courses라는 이름으로 다룬다.
+  */
++
++var courses = [
++    {
++        "courses": [
++            {
++                "title": "Event Driven Cakes",
++                "cost": 50
++            },
++            {
++                "title": "Asynchronous Artichoke",
++                "cost": 25
++            },
++            {
++                "title": "Object Oriented Orange Juice",
++                "cost": 10
++            }
++        ]
++    }
++];
++
++exports.showCourses = (req, res) => {
++    res.render("courses", {
++        offeredCourses: courses
++    });
++};
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1713608962531)
++++ b/.idea/.gitignore	(date 1713608962531)
+@@ -0,0 +1,5 @@
++# 디폴트 무시된 파일
++/shelf/
++/workspace.xml
++# 에디터 기반 HTTP 클라이언트 요청
++/httpRequests/
