@@ -1,6 +1,7 @@
 // homeController.js
 "use strict";
 
+const homeController = require("./homeControllers/homeController");
 /**
  * Listing 12.5 (p. 178)
  * 홈 컨트롤러로의 라우팅
@@ -15,7 +16,6 @@ exports.postedContactForm = (req, res)=> {
     res.render("thanks")
 };
 
-
 /**
  * Listing 12.9 (p. 182)
  * 콘텐츠의 설정과 렌더링된 뷰에 전달
@@ -26,22 +26,21 @@ exports.postedContactForm = (req, res)=> {
 
 var courses = [
     {
-        "courses": [
-            {
-                "title": "Event Driven Cakes",
-                "cost": 50
-            },
-            {
-                "title": "Asynchronous Artichoke",
-                "cost": 25
-            },
-            {
-                "title": "Object Oriented Orange Juice",
-                "cost": 10
-            }
-        ]
+        title: "Event Driven Cakes",
+        cost: 50
+    },
+    {
+        title: "Asynchronous Artichoke",
+        cost: 25
+    },
+    {
+        title: "Object Oriented Orange Juice",
+        cost: 10
     }
 ];
+
+
+
 
 exports.showCourses = (req, res) => {
     res.render("courses", {

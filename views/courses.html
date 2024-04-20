@@ -110,5 +110,9 @@
   <!-- @TODO: Loop through & display dynamic content -->
   <div class="container">
     <h1>Our Courses</h1>
+    <% offeredCourses.forEach(course => { %>
+      <h5> <%= course.title %> </h5>
+      <span>$ <%= course.cost %> </span>
+    <% }); %>
   </div>
 </main>
