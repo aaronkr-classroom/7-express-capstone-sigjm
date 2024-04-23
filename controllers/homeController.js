@@ -1,19 +1,21 @@
 // homeController.js
 "use strict";
 
-const homeController = require("./homeControllers/homeController");
 /**
  * Listing 12.5 (p. 178)
  * 홈 컨트롤러로의 라우팅
  */
-exports.showCourses = (req, res)=> {
-    res.render("courses")
+exports.showHome = (req, res) => {
+    res.render("index");
+}
+exports.showCourses = (req, res) => { // 특정 라우트를 위한 콜백 함수 추가
+    res.render("courses");
 };
-exports.showSignUp = (req, res)=> {
-    res.render("contact")
+exports.showSignUp = (req, res) => {
+    res.render("contact");
 };
-exports.postedContactForm = (req, res)=> {
-    res.render("thanks")
+exports.postedSignUp = (req, res) => {
+    res.render("thanks");
 };
 
 /**
@@ -23,7 +25,6 @@ exports.postedContactForm = (req, res)=> {
  * [노트] 뷰 안에서는 offeredCourses라는 변수명을 통해 배열에 접근할 수 있다.
  * 홈 컨트롤러 내에서 이 배열은 courses라는 이름으로 다룬다.
  */
-
 var courses = [
     {
         title: "Event Driven Cakes",
@@ -37,13 +38,10 @@ var courses = [
         title: "Object Oriented Orange Juice",
         cost: 10
     }
-];
+]; // 코스를 위한 배열 정의
 
-
-
-
-exports.showCourses = (req, res) => {
+exports.showRenderedCourses = (req, res) => {
     res.render("courses", {
-        offeredCourses: courses
+        offeredCourses: courses // 코스 배열 데이터를 뷰로 전달
     });
 };
