@@ -1,5 +1,6 @@
 // homeController.js
 "use strict";
+// "use strict";
 /**
  * Listing 12.5 (p. 178)
  * 홈 컨트롤러로의 라우팅
