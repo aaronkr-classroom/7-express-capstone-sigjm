@@ -195,7 +195,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713930127391</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="12test">
+      <option name="closed" value="true" />
+      <created>1713930298028</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713930298028</updated>
+    </task>
+    <task id="LOCAL-00013" summary="12test">
+      <option name="closed" value="true" />
+      <created>1713930366392</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713930366392</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +243,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="12" />
     <MESSAGE value="12test1" />
-    <option name="LAST_COMMIT_MESSAGE" value="12test1" />
+    <MESSAGE value="12test" />
+    <option name="LAST_COMMIT_MESSAGE" value="12test" />
   </component>
 </project>
