@@ -48,3 +48,5 @@ app.use(errorController.resInternalError);
 app.listen(app.get("port"), () => { // 3000번 포트로 리스닝 설정
     console.log(`Server running at http://localhost:${app.get("port")}`);
 });
+
+
