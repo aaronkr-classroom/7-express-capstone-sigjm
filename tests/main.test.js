@@ -23,7 +23,7 @@ describe('All Routes Function Correctly', function() {
             });
     });
 
-    test('GET /courses.html', (done) => {
+    test('GET /courses.ejs', (done) => {
         request(app)
             .get('/courses.html')
             .expect("Content-Type", "text/html")
@@ -34,7 +34,7 @@ describe('All Routes Function Correctly', function() {
             });
     });
 
-    test('GET /contact.html', (done) => {
+    test('GET /contact.ejs', (done) => {
         request(app)
             .get('/contact.html')
             .expect("Content-Type", "text/html")
@@ -45,7 +45,7 @@ describe('All Routes Function Correctly', function() {
             });
     });
 
-    test('GET /thanks.html', (done) => {
+    test('GET /thanks.ejs', (done) => {
         request(app)
             .get('/thanks.html')
             .expect("Content-Type", "text/html")
@@ -56,7 +56,7 @@ describe('All Routes Function Correctly', function() {
             });
     });
 
-    test('GET /error.html', (done) => {
+    test('GET /error.ejs', (done) => {
         request(app)
             .get('/error.html')
             .expect("Content-Type", "text/html")
@@ -67,7 +67,7 @@ describe('All Routes Function Correctly', function() {
             });
     });
 
-    test('POST /contact.html', (done) => {
+    test('POST /contact.ejs', (done) => {
         request(app)
             .post('/contact.html')
             .expect("Content-Type", "text/html")
@@ -78,3 +78,5 @@ describe('All Routes Function Correctly', function() {
             });
     });
 });
+
+
