@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e4fda07-18b0-4d6d-b9fb-971eb35b4831" name="변경" comment="12test222">
+    <list default="true" id="4e4fda07-18b0-4d6d-b9fb-971eb35b4831" name="변경" comment="12test333">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95b8005e55c95fca720711abc1ffe43f31e4e7e4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/homeController.js" afterDir="false" />
     </list>
@@ -110,7 +111,9 @@
       <workItem from="1713929652615" duration="108000" />
       <workItem from="1713929770044" duration="117000" />
       <workItem from="1713930459972" duration="58000" />
-      <workItem from="1713930526486" duration="64000" />
+      <workItem from="1713930526486" duration="100000" />
+      <workItem from="1713930637840" duration="116000" />
+      <workItem from="1713930763192" duration="119000" />
     </task>
     <task id="LOCAL-00001" summary="12">
       <option name="closed" value="true" />
@@ -224,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713930476462</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="12test222">
+      <option name="closed" value="true" />
+      <created>1713930594597</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1713930594597</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +270,7 @@
     <MESSAGE value="12test" />
     <MESSAGE value="12test111" />
     <MESSAGE value="12test222" />
-    <option name="LAST_COMMIT_MESSAGE" value="12test222" />
+    <MESSAGE value="12test333" />
+    <option name="LAST_COMMIT_MESSAGE" value="12test333" />
   </component>
 </project>
