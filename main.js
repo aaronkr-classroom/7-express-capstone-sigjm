@@ -8,7 +8,7 @@ const express = require('express'), // express를 요청
     errorController = require('./controllers/errorController'),
     app = express(); // express 애플리케이션의 인스턴스화
 
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 3001);
 
 /**
  * Listing 12.7 (p. 179)
