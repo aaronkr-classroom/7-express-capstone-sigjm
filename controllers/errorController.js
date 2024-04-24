@@ -4,7 +4,7 @@
 const httpStatus = require('http-status-codes');
 
 /**
- * Listing 11.2 (p. 168..)
+ * Listing 11.2 (p. 168.dd.)
  */
 exports.logErrors = (err, req, res, next) => {
     console.error(err.stack);
