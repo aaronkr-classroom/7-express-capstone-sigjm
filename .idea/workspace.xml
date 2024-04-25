@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e4fda07-18b0-4d6d-b9fb-971eb35b4831" name="변경" comment="12test1111111122223333">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95b8005e55c95fca720711abc1ffe43f31e4e7e4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95b8005e55c95fca720711abc1ffe43f31e4e7e4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,6 +126,8 @@
       <workItem from="1714057986899" duration="39000" />
       <workItem from="1714058033893" duration="585000" />
       <workItem from="1714058647170" duration="247000" />
+      <workItem from="1714058910490" duration="471000" />
+      <workItem from="1714059397577" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="12">
       <option name="closed" value="true" />
@@ -321,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713933580769</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="12test1111111122223333">
+      <option name="closed" value="true" />
+      <created>1714058930236</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1714058930236</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
